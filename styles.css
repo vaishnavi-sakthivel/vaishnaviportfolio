@@ -1,0 +1,459 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 40px;
+}
+
+.logo {
+    width: 200px;
+}
+
+#nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nav-links li {
+    padding: 0.5rem 1rem;
+}
+
+#nav-links li a {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+#nav-links li a:hover {
+    color: #ff69b4;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+/* Main Content */
+main {
+    padding-top: 4rem;
+}
+
+section {
+    padding: 4rem 1rem;
+    background-color: #fff;
+}
+
+section h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+section h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ff69b4;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdee9;
+    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+    padding: 60px 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeInUp 1s;
+    min-height: 100vh;
+}
+
+.home img {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.h-cont {
+    max-width: 600px;
+    margin: 20px 0;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.h-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.resume {
+    margin-top: 1.5rem;
+}
+
+.resume a {
+    display: inline-block;
+    background-color: #fff;
+    color: #ff6b6b;
+    border: 2px solid #ff6b6b;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume a:hover {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+/* About Section */
+.about {
+    background-color: #f9f9f9;
+}
+
+.about-cont {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Skills Section */
+.skills {
+    text-align: center;
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.skills ul li {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skills ul li:hover {
+    transform: translateY(-5px);
+}
+
+.skills ul li i {
+    margin-right: 0.5rem;
+}
+
+/* Soft Skills Section */
+.soft-skills {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.soft-skills ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.soft-skills ul li {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.soft-skills ul li i {
+    margin-right: 0.5rem;
+}
+
+/* Experience Section */
+.experience {
+    text-align: center;
+}
+
+.experience h2 {
+    margin-top: 2rem;
+}
+
+
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: #333; /* Adjusted color for better readability */
+}
+
+.contact h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ff69b4;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666; /* Adjusted color for better readability */
+}
+
+.contact a {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Ensure links do not have underline */
+}
+
+.contact a:hover {
+    background-color: #fff;
+    color: #ff6b6b;
+    transform: scale(1.05);
+}
+
+.contact .contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adjusted box shadow for subtlety */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact .contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+}
+
+.contact .contact-info p {
+    margin-bottom: 1rem;
+}
+
+.contact .contact-actions {
+    margin-top: 1rem;
+}
+
+.contact .contact-actions a {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Ensure links do not have underline */
+}
+
+.contact .contact-actions a:hover {
+    background-color: #fff;
+    color: #ff6b6b;
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* Example of social icons */
+.contact .social-links a i {
+    vertical-align: middle;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Go to Top Button */
+.go-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6b6b;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.go-top:hover {
+    background-color: #fff;
+    color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .menu-icon {
+        display: block;
+        font-size: 15px;
+        color: #fff;
+    
+    }
+
+    #nav-links {
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background-color: #222;
+        flex-direction: column;
+        width: 50%;
+        max-width: 300px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #nav-links.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-icon {
+        font-size: 14px;
+    }
+
+    #nav-links {
+        top: 4rem;
+        width: 70%;
+    }
+
+    .home {
+        padding: 40px 20px;
+    }
+
+    .h-cont {
+        padding: 0 1rem;
+    }
+
+    .h-img img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .menu-icon {
+        font-size: 12px;
+    }
+
+    #nav-links {
+        top: 4.58rem;
+        width: 80%;
+    }
+
+    .home {
+        padding: 20px;
+    }
+
+    .h-cont {
+        padding: 0 0.5rem;
+    }
+
+    .h-img img {
+        width: 300px;
+        height: 300px;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi Portfolio</title>
+     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="fade-in">
+            <div class="logo-link"><img src="v
+                ++logo.png" class="logo" alt="Logo"></div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-icon">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home" class="fade-in">
+            <div class="h-cont">
+                <p class="animate__animated animate__bounce" style="color: #ff69b4;">Web Developer</p>
+                <h1>Hi, I am <span style="color:#ff69b4;">V</span><span>aishnavi</span></h1>
+                <div class="resume">
+                    <a href="https://drive.google.com/file/d/15R0NknpFmKuozdL4GIGjDPAJbx_WMc_M/view?usp=drive_link" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+                </div>
+            </div>
+            <div class="h-img">
+                <img src="profile-pic.png" alt="Profile Picture">
+            </div>
+        </section>
+
+        <section id="about" class="about" class="fade-in">
+            <div class="about-cont">
+                <h1>About Me</h1>
+                <p>I'm a passionate and dedicated computer science student with a keen interest in various facets of technology. Currently pursuing my degree in computer science, I thrive on challenges and enjoy exploring diverse fields within the realm of computing. I am currently enrolled in Anna University, where I am gaining a solid foundation in computer science principles. My academic journey has equipped me with essential skills in problem-solving, algorithm design, and software development.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="skills" class="fade-in">
+            <h1>Technical Skills</h1>
+            <ul>
+                <li><i class="fab fa-java"></i> Java</li>
+                
+                <li><i class="fas fa-laptop-code"></i> Frontend Development (HTML/CSS/JS)</li>
+                <li><i class="fas fa-database"></i> Database Development (MySQL)</li>
+                <li><i class="fas fa-python"></i> Python (Beginner)</li>
+                <li><i class="fab fa-react"></i> React.js</li>
+                <li><i class="fab fa-node"></i> Node.js</li>
+                <li><i class="fas fa-code"></i> C Programming</li>
+                
+            </ul>
+        </section>
+
+        <section class="soft-skills" class="fade-in">
+            <h1>Soft Skills</h1>
+            <ul>
+                <li><i class="fas fa-users"></i> Team Spirit</li>
+                <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+                <li><i class="fas fa-comments"></i> Communication</li>
+                <li><i class="fas fa-clock"></i> Time Management</li>
+                <li><i class="fas fa-motivation"></i> Self-Motivation</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="experience" class="fade-in">
+            <h1>Experience</h1>
+            <h2><i class="fas fa-briefcase"></i> Intern, (Software testing, Software monitoring)</h2>
+            <p>FORD GLOBAL TECHNOLOGY PVT. LTD </p>
+            <p>
+                
+         </p>
+        </section>
+        <section id="contact" class="contact" class="fade-in">
+            <h1>Contact</h1>
+            <p><i class="fas fa-phone">  +91-8056197880 </i> </p>
+            <p> <a href="mailto:"><i class="fas fa-envelope"></i> vaishnavisakthivel15@gmail.com</a></p>
+            <p>
+                <a href="" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            <p><i class="fas fa-map-marker-alt"> Pallavaram, Chennai, Tamil Nadu</i> </p>
+            <p><a href="8056197880" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> Chat with me on WhatsApp</a></p>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+        <p>&copy; 2024 Vaishnavi. All rights reserved.</p>
+    </footer>
+    <a href="#" class="go-top"><i class="fa fa-arrow-up"></i></a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggle navigation menu for small screens
+            document.querySelector('.menu-icon').addEventListener('click', function () {
+                document.getElementById('nav-links').classList.toggle('active');
+            });
+
+            // Smooth scroll to sections
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Project carousel functionality
+            const carousels = document.querySelectorAll('.project-carousel');
+            carousels.forEach(carousel => {
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const prevBtn = carousel.querySelector('.carousel-prev');
+                const nextBtn = carousel.querySelector('.carousel-next');
+                let currentIndex = 0;
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === index ? 'block' : 'none';
+                    });
+                }
+
+                showSlide(currentIndex);
+
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                });
+            });
+
+            // Scroll to top button functionality
+            const goTopBtn = document.querySelector('.go-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    goTopBtn.classList.add('show');
+                } else {
+                    goTopBtn.classList.remove('show');
+                }
+            });
+
+            goTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
